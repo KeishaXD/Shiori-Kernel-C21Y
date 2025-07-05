@@ -37,3 +37,5 @@ This repository contains a custom kernel for the Realme C21Y, built from the **R
   - ARM GNU Toolchain 14.3 or earlier (**recommended**) ✅
 
 ---
+
+**You can get notified about Kaiju kernel builds:** Telegram channel [here](https://t.me/kaijukernel).
