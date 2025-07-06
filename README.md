@@ -4,7 +4,7 @@
 
 Custom kernel source for the Realme C21Y, built from the **RED8D1** official source tree.
 
-> ⚠️ **Note**: This is **not** the source for the Kaiju kernel release, which includes additional performance patches and other changes.
+> ⚠️ **Note**: This is **not** the source for my Kaiju kernel release, which includes additional performance patches and other changes.
 
 ---
 
