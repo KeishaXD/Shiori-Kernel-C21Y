@@ -2,7 +2,7 @@
 
 # Realme C21Y (RMX3261 / RMX3263) Kernel – RED8D1
 
-This repository contains a custom kernel for the Realme C21Y, built from the **RED8D1** source tree.
+Custom kernel source for the Realme C21Y, built from the **RED8D1** official source tree.
 
 > ⚠️ **Note**: This is **not** the source for the Kaiju kernel release, which includes additional performance patches and other changes.
 
