@@ -24,7 +24,7 @@ Custom kernel source for the Realme C21Y, built from the **RED8D1** official sou
   - In `realme3263_defconfig`, both kernel module signature verification and `CONFIG_MODVERSIONS` are disabled to simplify development and loading of custom modules.
 -  **Stock defconfig included**
   - An extracted stock defconfig is included under the `config/` directory as `stock_defconfig`.
-  - ⚠️ **Note:** The stock defconfig does not align 1:1 with this source tree. For example, `oppo_device_ifno` has been renamed to `oplus_device_ifno`, and other vendor-specific differences may exist.
+-  ⚠️ **Note:** The stock defconfig does not align 1:1 with this source tree. For example, `oppo_device_ifno` has been renamed to `oplus_device_ifno`, and other vendor-specific differences may exist.
   - **Not recommended** for building — use `realme3263_defconfig` instead.
 
 ---
