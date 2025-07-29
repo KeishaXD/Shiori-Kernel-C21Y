@@ -1,41 +1,52 @@
 ![Isagi Celebrating](isagi.png)
 
-# Realme C21Y (RMX3261 / RMX3263) Kernel – RED8D1
+# Realme C21Y (RMX3261 / RMX3263) Kernel – **RED8D1**
 
-Custom kernel source for the Realme C21Y, built from the **RED8D1** official source tree.
-
-> ⚠️ **Note**: This is **not** the source for my Kaiju kernel release, which includes additional performance patches and other changes.
+Custom kernel source for the **Realme C21Y**, built from the official **RED8D1** tree.  
 
 ---
 
-## Highlights & Modifications
-
-- **Removed YAML dependency in DTC**
-  - Avoids `libyaml` linking errors during kernel compilation.
-- **SELinux set to permissive**
-  - If you want enforcing mode, replace the following files with those from the official Realme source:
-    - `hooks.c`
-    - `selinuxfs.c`
-- **Fixed internal error dialog**
-  - Resolved: _"There is an internal problem with your device. Please contact your manufacturer."_
-- **Other small patches**
-  - Minor stability and compatibility improvements (some undocumented).
-- **Module signature checking & modversion disabled**
-  - In `realme3263_defconfig`, both kernel module signature verification and `CONFIG_MODVERSIONS` are disabled to simplify development and loading of custom modules.
--  **Stock defconfig included**
-   - An extracted stock defconfig is included under the `config/` directory as `stock_defconfig`.
--  ⚠️ **Note:** The stock defconfig does not align 1:1 with this source tree. For example, `oppo_device_ifno` has been renamed to `oplus_device_ifno`, and other vendor-specific differences may exist.
-  - **Not recommended** for building — use `realme3263_defconfig` instead.
+### Important  
+This is **not** the Kaiju Kernel Source.  
+For the newer source with kernelsu-next visit:  
+[**RealmeC21Y-kernelSU-Next**](https://github.com/fanu96/RealmeC21Y-kernelSU-Next.git)
 
 ---
 
-## 🧰 Compiler Compatibility
+## Overview of Changes  
 
-- ✅ **Clang:** `clang-r383902b` (**required**)
-- ✅ **GCC:**
-  - Android GCC 4.9 ✅
-  - ARM GNU Toolchain 14.3 or earlier (**recommended**) ✅
+### Build & Stability  
+- Removed YAML dependency from DTC (prevents `libyaml` compilation errors).  
+- Fixed the boot warning:  
+  *"There is an internal problem with your device. Please contact your manufacturer."*  
+- Applied several minor stability and compatibility improvements (some undocumented).  
 
 ---
 
-**You can get notified about Kaiju kernel builds:** Telegram channel [here](https://t.me/kaijukernel).
+### SELinux  
+- Default mode: **Permissive**.  
+- If enforcing mode is preferred:  
+  - Replace `hooks.c` and `selinuxfs.c` with versions from the stock Realme source.
+
+---
+
+### Module and Config Adjustments  
+- Kernel module signature verification disabled.  
+- `CONFIG_MODVERSIONS` disabled (allows easy loading of custom modules).  
+- Stock defconfig provided as `config/stock_defconfig`.  
+  - For reference only — not directly compatible.  
+  - Use `realme3263_defconfig` for actual kernel builds.  
+
+---
+
+## Compiler Requirements  
+- **Clang:** Must use `clang-r383902b`.  
+- **GCC:**  
+  - Android GCC 4.9 supported.  
+  - ARM GNU Toolchain 14.3 or older is recommended.  
+
+---
+
+## Stay Updated  
+For **Kaiju Kernel** announcements and releases:  
+[**Join the Telegram Channel**](https://t.me/kaijukernel)
