@@ -40,7 +40,7 @@ For the newer source with kernelsu-next visit:
 ---
 
 ## Compiler Requirements  
-- **Clang:** Must use `clang-r383902b`.  
+- **Clang:** use `clang-r383902b`.  
 - **GCC:**  
   - Android GCC 4.9 supported.  
   - ARM GNU Toolchain 14.3 or older is recommended.  
